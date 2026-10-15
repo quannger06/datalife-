@@ -20,4 +20,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Confirm workflow is running
-        run: echo "GitHub Actions is running successfully."
+  run: exit 1
