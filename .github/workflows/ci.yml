@@ -16,8 +16,12 @@ jobs:
   repository-check:
     name: Repository configuration check
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Confirm workflow is running
-  run: exit 1
+
+      - name: Test CI protection
+        run: |
+          echo "Testing CI failure protection"
+          exit 1
